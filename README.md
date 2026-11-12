@@ -1,70 +1,98 @@
 # Sales Performance Analysis
 
-An end-to-end sales analytics portfolio project using **SQL Server** and **Power BI**.
+An end-to-end sales analytics portfolio project using **SQL Server, Power BI, and DAX**.
 
 ## Project Overview
 
-This project explores sales performance at both business and product levels. SQL is used to inspect the source tables, calculate core sales KPIs, compare yearly performance, and investigate product and category results. The Power BI report presents the analysis through an interactive dashboard.
+This project analyzes sales performance, product performance, and business trends using SQL Server and Power BI.
 
-## Tools
+SQL is used to explore the dataset, calculate key business metrics, and perform detailed sales analysis. Power BI is used to transform these insights into interactive dashboards that support data-driven decision-making.
+
+## Tools & Technologies
 
 - SQL Server
 - Power BI
 - DAX
+- Data Analysis & Visualization
 
 ## Repository Structure
 
 ```text
 Sales-Performance-Analysis/
+│
 ├── SQL/
 │   └── Sales_Analysis_Corrected.sql
+│
 ├── PowerBI/
-│   └── README.md
+│   └── Sales_Dashboard.pbix
+│
 ├── Images/
-│   └── README.md
+│   ├── Home.png
+│   ├── Sales_Overview.png
+│   └── Product_Analysis.png
+│
 └── README.md
 ```
 
+## Dashboard Preview
+
+### 1. Home Page
+
+The main navigation page provides access to the different dashboard sections.
+
+![Home Page](Images/Home.png)
+
+### 2. Sales Overview
+
+This page provides an overview of overall sales performance through key performance indicators and interactive visualizations.
+
+![Sales Overview](Images/Sales_Overview.png)
+
+### 3. Product Analysis
+
+This page explores product performance, sales distribution, and category-level insights.
+
+![Product Analysis](Images/Product_Analysis.png)
+
 ## SQL Analysis
 
-The SQL script includes 21 numbered analysis sections, covering:
+The SQL script includes 21 numbered analysis sections covering:
 
-- Data exploration for sales and product tables
-- Daily and yearly sales
-- Total sales, orders, customers, and quantity KPIs
-- Top and bottom products by sales
-- Year-over-year product sales comparison using `LAG()`
-- Product sales compared with average sales using window functions
-- Sales and quantity by category and product line
-- Product cost and sales comparisons
-- Products with and without matching sales records
-
-## Power BI Report
-
-The report is organized around a home/navigation page and analysis pages, including Sales Overview and Product Analysis. The Power BI file and report screenshots will be added to the folders when the binary report and final images are uploaded.
+- Data exploration for sales and product tables.
+- Daily and yearly sales analysis.
+- Total sales, orders, customers, and quantity KPIs.
+- Top and bottom products by sales.
+- Year-over-year sales comparison using `LAG()`.
+- Product sales compared with average sales using window functions.
+- Sales and quantity by category and product line.
+- Product cost and sales comparisons.
+- Products with and without matching sales records.
 
 ## Data Model
 
-The SQL analysis uses these tables:
+The project uses the following source tables:
 
 - `dbo.[gold.fact_sales]`
 - `dbo.products`
 
-The script assumes the database is named `SalesTrainingDB`. Update the database name or table references if your local SQL Server environment differs.
+The SQL script assumes the database is named `SalesTrainingDB`.
 
 ## How to Use
 
-1. Open SQL Server Management Studio.
-2. Connect to a SQL Server instance that contains the required database and tables.
-3. Open `SQL/Sales_Analysis_Corrected.sql`.
-4. Run the sections individually or in order, checking the comments and outputs.
-5. Open the Power BI report after adding the PBIX file to the `PowerBI` folder.
+1. Clone or download this repository.
+2. Open the SQL script using SQL Server Management Studio.
+3. Connect to a SQL Server instance containing the required database and tables.
+4. Execute the SQL analysis sections.
+5. Open the Power BI `.pbix` file using Power BI Desktop.
+6. Explore the interactive dashboards.
 
-## Notes
+## Project Goals
 
-- The SQL script is provided as an analysis script; it expects the source database and tables to exist.
-- Do not publish credentials, private connection strings, or other sensitive environment details.
-- Dashboard screenshots and the PBIX report are not included in this initial commit.
+- Analyze business sales performance.
+- Identify top-performing products and categories.
+- Compare sales performance across different years.
+- Translate raw data into meaningful business insights.
+- Build interactive dashboards for business decision-making.
 
 ## Author
 
